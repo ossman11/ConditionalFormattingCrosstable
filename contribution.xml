@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdkExtension
+	xmlns="http://www.sap.com/bi/zen/sdk"
+	id="com.bob.tools"
+	title="BOB CrossTable relational design"
+	version="16.1"
+	vendor="BOB">
+	<component
+		id="CrossTableDesign"
+		title="CrossTableDesign"
+		icon="res/icon.png"
+		handlerType="div"
+    	modes="commons m"
+		propertySheetPath="res/additional_properties_sheet/additional_properties_sheet.html">
+		<requireJs modes="commons m">res/js/component</requireJs><property id="target" type="String" title="Target CrossTab"
+			group="Data Binding">
+</property>
+		<property id="rules" type="String" title="Rules" group="Display"></property>
+		<initialization>
+			<defaultValue property="LEFT_MARGIN">0</defaultValue>
+			<defaultValue property="TOP_MARGIN">0</defaultValue>		
+			<defaultValue property="WIDTH">0</defaultValue>
+			<defaultValue property="HEIGHT">0</defaultValue>
+			<defaultValue property="target">NULL</defaultValue>
+			<defaultValue property="rules">{"ROW":[],"CELL":[],"COLUMN":[],"STYLE":{}}</defaultValue></initialization>
+	</component>
+</sdkExtension>

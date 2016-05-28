@@ -1,0 +1,10 @@
+class com.bob.tools.CrossTableDesign extends Component {
+
+	String getRules() {*
+		return this.rules;
+	*}
+
+	void setRules( String newRules) {*
+		this.rules = "";
+	*}
+}

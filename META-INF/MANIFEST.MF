@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BOB CrossTable relational design
+Bundle-SymbolicName: com.bob.tools;singleton:=true
+Bundle-Version: 16.1.0.qualifier
+Require-Bundle: com.sap.ip.bi.zen.rt.components.sdk.eclipse
+Bundle-Vendor: BOB

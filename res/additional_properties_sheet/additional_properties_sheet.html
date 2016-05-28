@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Colored Box Property Sheet</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="/aad/zen.rt.components.sdk/resources/js/sdk_propertysheets_handler.js"></script>
+		<script src="additional_properties_sheet.js"></script>
+		<style>
+			body{
+				margin:0;
+				padding:0;
+			}
+			.RuleHolder{
+				overflow: hidden;
+				border:solid 0px grey;
+				border-width: 5px 0px;
+				width:100%;
+			}
+			.RuleHolder.Cell input.StyleName{
+				width:60%;
+			}
+			.RuleHolder.Style input.StyleName{
+				width:80%;
+			}
+			.Title{
+				width:100%;
+				padding:2px;
+			}
+			.Rule{
+				width:100%;
+				border:solid 1px grey;
+				border-width: 1px 0px;
+				padding:2px;
+			}
+			.Rule input{
+				border:none;
+				width: 30%;
+			    margin-left: -4px;
+			}
+			.Rule .Property input{
+				width: 45%;
+			}
+			.Add{
+				cursor:pointer;
+				width:100%;
+				background-color:green;
+				padding:2px;
+				color:white;
+			}
+			.Add.Small{
+				text-align: center;
+				float:right;
+				height:15px;
+				padding:0px;
+				width: 10%;
+			}
+			.Add::before{
+				content: "Add";
+			}
+			.Remove{
+				cursor:pointer;
+				float:right;
+				width: 10%;
+				height:15px;
+				color:white;
+
+				background-color:red;
+				text-align: center;
+			}
+			.Remove::before{
+				font-family: arial;
+				content: "X";
+			}
+		</style>
+	</head>
+	<script>
+		new com.bob.tools.CrossTableDesignPropertyPage();
+	</script>
+	<body>
+		<form id="form">
+			<div class="RuleHolder Row">
+				<div class="Title">Row Rules</div>
+				<div class="Rules"></div>
+				<div class="Add Rule" onclick="addRule(this);"></div>
+			</div>
+			<div class="RuleHolder Cell">
+				<div class="Title">Cell Rules</div>
+				<div class="Rules"></div>				
+				<div class="Add Rule" onclick="addRule(this);"></div>
+			</div>
+			<div class="RuleHolder Style">
+				<div class="Title">Custom Styles</div>
+				<div class="Rules"></div>
+				<div class="Add Rule" onclick="addRule(this);"></div>
+			</div>
+			<input type="submit" />
+		</form>
+		<datalist id="CustomStyles">
+		</datalist>
+		<datalist id="RowRuleTypes">
+			<option value="text">
+    		<option value="class">
+		</datalist>
+		<datalist id="CellRuleTypes">
+			<option value="positive">
+			<option value="negative">
+		</datalist>
+	</body>
+</html>
